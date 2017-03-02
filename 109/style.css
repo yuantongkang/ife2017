@@ -1,0 +1,72 @@
+div {
+    box-sizing: border-box;
+}
+
+#board-container {
+    /* 400px (棋盘) + 2 * 1px (棋盘边框) + 40px (坐标) */
+    width: 442px;
+    height: 442px;
+}
+
+#col-nums {
+    width: 441px;
+    height: 40px;
+    padding-left: 41px;
+}
+
+#col-nums .num {
+    float: left;
+}
+
+#rol-nums {
+    width: 40px;
+    height: 400px;
+    float: left;
+}
+
+.num {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#board {
+    width: 402px;
+    height: 402px;
+    border: 1px solid #000;
+    float: left;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    /* 小方块要使用 absolute 定位 */
+    position: relative;
+}
+
+#board .grid {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #eee;
+}
+
+#block {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #da2c2c;
+    border-top: 10px solid #2ab5e3;
+}
+
+.animated {
+    transition: all .3s;
+}
+
+#command {
+    margin: 20px 0 20px 40px;
+    padding: 8px;
+}
+
+#execute {
+    padding: 8px 16px;
+}
